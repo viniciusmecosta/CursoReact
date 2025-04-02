@@ -1,5 +1,6 @@
 import "./App.css";
 import logo from "./assets/logo.png"
+import CondicionalRender from "./components/CondicionalRender";
 import ListRender from "./components/ListRender";
 import ManageData from "./components/ManageData";
 function App() {
@@ -12,6 +13,7 @@ function App() {
         </div>
         <ManageData/>
         <ListRender/>
+        <CondicionalRender/>
       </div>
     </>
   );
