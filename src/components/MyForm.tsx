@@ -1,23 +1,26 @@
-import { useState } from "react";
+import { FormEvent, useState } from "react";
 import "./MyForm.css";
 const MyForm = () => {
-  const [name, setName] = useState();
-  const [email, setEmail] = useState();
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
 
-  const handleName = (e: any) => {
-    setName(e.target.value);
+  const handleForm = (e: FormEvent<Element>): void => {
+    e.preventDefault();
+    console.log(name);
+    console.log(email);
+    console.log("Enviando forms");
   };
 
   return (
     <div>
-      <form>
+      <form onSubmit={handleForm}>
         <div>
           <label htmlFor="name">Nome:</label>
           <input
             type="text"
             name="name"
             placeholder="Digite seu nome"
-            onChange={handleName}
+            onChange={(e) => setName(e.target.value)}
           ></input>
         </div>
         <label>
@@ -26,6 +29,7 @@ const MyForm = () => {
             type="text"
             name="email"
             placeholder="Digite seu e-mail"
+            onChange={(e) => setEmail(e.target.value)}
           ></input>
         </label>
         <input type="submit" value={"Enviar"}></input>

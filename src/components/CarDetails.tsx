@@ -1,5 +1,5 @@
 import { Car } from "./Car";
-import styles from "./CarDetails.module.css"
+import styles from "./CarDetails.module.css";
 
 interface ListCar {
   listCar: Car[];
