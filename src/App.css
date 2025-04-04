@@ -40,3 +40,14 @@
 .read-the-docs {
   color: #888;
 }
+
+.red-title {
+  color: red;
+  background-color: white;
+  padding: 15px;
+}
+
+.title {
+  background-color: aqua;
+  color: black;
+}

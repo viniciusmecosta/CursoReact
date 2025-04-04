@@ -1,17 +1,26 @@
 import { useState } from "react";
 import "./App.css";
-import ChangeMessageState from "./components/ChangeMessageState";
+import Title from "./components/Title";
 function App() {
-  const [message, setMessage] = useState("");
-  function showMessage() {
-    console.log("Funcao acionada");
-  }
-  function handleMessage(msg: string) {
-    setMessage(msg);
-  }
+  const n: number = 20;
+  const redTitle: boolean = true;
+  const [name, setName] = useState("Jorge");
   return (
     <>
-      <ChangeMessageState handleMessage={handleMessage} />
+      <p style={{ color: "blue", fontSize: 100 }}>
+        Este elemento foi estilizado inline
+      </p>
+      <h2
+        style={name === "Vinicius" ? { color: "white" } : { color: "purple" }}
+      >
+        {" "}
+        h2 style dinamico
+      </h2>
+
+      <h2 className={redTitle ? "red-title" : "title"}>
+        Esse titulo vai ter classe dinamica
+      </h2>
+      <Title />
     </>
   );
 }

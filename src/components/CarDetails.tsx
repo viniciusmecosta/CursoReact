@@ -1,17 +1,21 @@
-interface myCarinterface{
-    model: string,
-    color: String,
-    year: number
+import { Car } from "./Car";
+import styles from "./CarDetails.module.css"
+
+interface ListCar {
+  listCar: Car[];
 }
-const CarDetails = ({model, color, year}: myCarinterface) => {
+
+const CarDetails = (Cars: ListCar) => {
   return (
     <div>
-        <h1>O modelo do Carro é {model}</h1>
-        <h1>O ano de fabricação do carro é {year}</h1>
-        <h1>A Cor do carro é {color}</h1>
-
+      {Cars.listCar.map((car) => (
+        <h1 className={styles.h1_car}>
+          O carro com modelo: {car.model} e cor: {car.color} foi lançado em{" "}
+          {car.year}.
+        </h1>
+      ))}
     </div>
-  )
-}
+  );
+};
 
-export default CarDetails
+export default CarDetails;
