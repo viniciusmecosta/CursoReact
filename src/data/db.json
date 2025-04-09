@@ -1,0 +1,29 @@
+{
+  "products": [
+    {
+      "id": 1,
+      "name": "Blusa",
+      "price": 63.97
+    },
+    {
+      "id": 2,
+      "name": "Short",
+      "price": 98.78
+    },
+    {
+      "id": 4,
+      "name": "Calça",
+      "price": 125.7
+    },
+    {
+      "id": 5,
+      "name": "Sapato",
+      "price": 220.78
+    },
+    {
+      "id": 6,
+      "name": "Boné aba Reta",
+      "price": 35.33
+    }
+  ]
+}
